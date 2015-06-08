@@ -1,0 +1,198 @@
+
+pre.textStyle{
+	color: black;
+	font-size: 18px;
+}
+
+body{
+	background: linear-gradient(to bottom right,green 5%,  white 90%);
+}
+
+#myreply{
+	width: 565px;
+	font-size:18px;	
+	border-radius: 15px; 
+	height: 180px; 
+	border-color: green;
+	color: #A52A2A
+}
+
+#asker_date{
+	color:#8B4513;
+}
+#bodydiv{
+	background-color: white;
+	border-width: 5px;
+	border-style:solid;
+	border-color:#008080;
+	border-radius: 25px;
+}
+#kechengtiwen{
+	color: 00FF00;
+}
+#titlediv{
+	background-color: white;
+	padding: 2px;
+}
+#h3{
+	height: 39px;
+	font-size: 30px;
+	background-color: white;
+}
+#asker_date{
+	border-radius: 25px;
+	background-color: #EEE8AA;
+}
+#comment{
+	color: blue;
+	font-size: 18px;
+	font-style:normal; 
+	border-radius:25px;
+}
+b.aut{
+	color: blue;
+	font-size: 14px;
+}
+#fanye{
+float: right;
+}
+#question{
+	font-size: 20px;
+	border-radius:25px;
+	color:#4B0082;
+	font-weight:bolder;
+	background-color:#9ACD32;
+}
+#lastpage{
+	height: 45px;
+	background-color:#4169E1;
+	width: 80px;
+	text-align: center;
+}
+#nextpage{
+	height: 45px;
+	background-color:#4169E1;
+	width: 80px;
+	text-align: center;
+}
+#currPage{
+	font-size: x-large;
+}
+#maxPage{
+	font-size: x-large;
+}
+#ye{
+	font-size: x-large;
+}
+#skipTo{
+	font-size: x-large;
+}
+#skip{
+	height: 45px;
+	background-color:#4169E1;
+	width: 80px;
+	text-align: center;
+}
+dt{
+	color:green;
+}
+li{
+	border-color: blue;
+	border-width: 3px;
+	}
+#comment{
+	border-style: solid;
+	border-color:green;
+	border-radius:25px;
+	padding: 10px;
+}
+#answer0{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer1{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer2{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer3{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer4{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer5{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer6{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer7{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer8{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer9{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer10{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer11{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer12{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer13{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}
+#answer14{
+	color:#008080;
+	border-radius:35px;
+	background-color: #90EE90;
+	font-weight: bold;
+}

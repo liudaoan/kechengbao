@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+   <title>学生问答</title>
+   <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+   <link href="qa.css" rel="stylesheet">
+   <script src="qa.js"></script>
+   <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+   <script src="http://cdn.bootcss.com/json2/20140204/json2.min.js"></script>
+   <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+   <script src="http://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+   
+</head>
+<body>
+<div id="divdiv" class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div  class="modal fade" id="modal-container-787651" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content" style="margin-top: 200px">
+						<div class="modal-header">
+							 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">
+								我要回答
+							</h4>
+						</div>
+						<div style="width: 300px; height: 200px"  class="modal-body">
+						<textarea id="myreply" ></textarea>
+						</div>
+						<div class="modal-footer">
+					    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button> <button type="button" class="btn btn-primary" id="answeringbtn" onclick="answering()">提交</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br/>
+<div id = "bodydiv"  style="width: 800px" class="container-fluid">
+	<br />
+	<div id="titlediv" class="row-fluid">
+		<div class="span12">
+			<hr />
+			<h3 id = "h3">
+				<strong><b style="color: green" id="kechengtiwen">课程提问：</b><pre style="float:right;" id="asker_date" ></pre></strong>
+			</h3>
+			<hr />
+			<br />
+			<pre id = "question">   最初由编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。最初由编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。最初由编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。最初由编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在Ruby社区中。
+			</pre>
+		</div>
+		<a style="float: right;" id="modal-787651" href="#modal-container-787651" role="button" class="btn" data-toggle="modal"><button style="float: right;height: 40px;width: 70px;font-size: 18px" type="button" class="btn btn-success">评论</button></a>
+		
+    </div>
+    <br />
+    <hr />
+    <br /><br />
+    <ul id = "comment" class="list-group">
+	</ul>
+	<ul id="fanye" class="pagination">
+	  <li> <button type="button" id = "lastpage" onclick="lastPage()" class="btn btn-lg btn-success"	>上一页</button></li>
+	  <li id = "currPage">第1页</li>
+	  <li> <button type="button" id = "nextpage" class="btn btn-lg btn-success" onclick="nextPage()">下一页</button></li>
+	  <li id = "maxPage">共0页</li>
+	  <li><button type="button" class="btn btn-lg btn-success" id = "skip" onclick = "skipToPage()">跳至：</button></a></li>
+	  <li><input id = "skipTo" type="text" /></li>
+	  <li id="ye">页</li>
+	</ul>
+	<br />
+	<br />
+</div>
+	<br />
+	<br />
+</body>
+</html>			

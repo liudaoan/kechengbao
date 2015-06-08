@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>课程信息平台</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.3.4/css/bootstrap.min.css"> 
+        <link href="./test.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="jquery.cookie.js"></script>
+        <script src="jquery.livequery.js"></script>
+        <script src="http://cdn.bootcss.com/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="test.js"></script>
+
+    </head>
+    
+    <!-- HTML code from Bootply.com editor -->
+    
+  <body>
+    <nav class="navbar navbar-static">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="" target=""><b>课程信息平台</b></a>
+        </div>
+        <ul class="nav navbar-right navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+            <ul class="dropdown-menu" style="padding:12px;">
+              <form class="form-inline">
+                <button type="submit" class="btn btn-default pull-right">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button>
+                <input type="text" class="form-control pull-left" placeholder="Search">
+              </form>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span id="userID">李华</span>
+              <i class="glyphicon glyphicon-chevron-down"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="login.html">Login</a></li>
+              <li><a data-toggle="modal" data-target="#memProfile" id="edit-mem-pro">Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav><!-- /.navbar -->
+
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1><a id="date">2015年 5月 1日</a>
+              <p class="lead" id="period">周五早上</p></h1>
+          </div>
+          <div class="col-md-6">
+            <div class="well pull-right">
+              <img src="http://d.hiphotos.baidu.com/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=d28a187c4cc2d562e605d8bf8678fb8a/72f082025aafa40f204978c1a864034f78f0191a.jpg"
+              width="100" height="100" class="img-responsive">        
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Begin Body -->
+    <div class="container">
+      <div class="no-gutter row">
+        <!-- left side column -->
+        <div class="col-md-2">
+          <div class="panel panel-default" id="sidebar">
+            <div class="panel-heading" style="background-color:#888;color:#fff;">
+              <div class="course-name" data-toggle="collapse" href="#course-choose">系统分析与设计</div>
+            </div> 
+            <div class="panel-body">
+              <ul class="nav nav-stacked" data-spy="affix">
+                <li><a href="#">课程消息</a></li>
+                <li><a href="#member-manager">课程成员</a></li>
+                <li><a href="#class-data">课程信息</a></li>
+              </ul>
+            </div><!--/panel body-->
+            <div class="panel-footer" id="otherCourseChoose" data-toggle="collapse" href="#course-choose"><a>其它课程</a></div>
+            <div id="course-choose" class="panel-footer collapse">
+              <ul class="nav nav-stacked" id="otherCourseList">
+                <li class="otherCourse"><b>系统分析与设计</b></li>
+              </ul>
+            <div id="createCourse" data-toggle="modal" data-target="#newCourse"><a style="background-color:#0099FF;color:#fff">新建课程</a></div>
+            </div>
+          </div><!--/panel-->
+        </div><!--/end left column-->
+                   
+                <!--mid column-->
+        <div class="col-md-3">
+          <div class="panel" id="midCol">
+            <div class="panel-heading" style="background-color:#555;color:#eee;">最近消息</div> 
+            <div class="panel-body">              
+              <div class="well">
+                <div id="recent-news">
+                  <div class="message well">
+                        <h4 class="media-heading">
+                          <img class="message-head" src="http://s.bootply.com/assets/example/bg_iphone.png">
+                          <a class="message-title" href="#">ASK：用例图要画多少个？</a>
+                        </h4>
+                        <p>
+                        blablablablabla
+                        </p>
+                        
+                        <div class="btn-group">
+                          <span role="button" class="btn btn-success">已解决</span>
+                          <span role="button" class="btn btn-primary">查看</span>
+                        </div>
+                  </div>
+                  <div class="message well">
+                        <h4 class="media-heading">
+                          <img class="message-head" src="http://s.bootply.com/assets/example/bg_iphone.png">
+                          <a class="message-title" href="#">ASK：用例图要画多少个？</a>
+                        </h4>
+                        <p>
+                        blablablablabla
+                        </p>
+                        
+                        <div class="btn-group">
+                          <span role="button" class="btn btn-danger">50问</span>
+                          <span role="button" class="btn btn-primary">查看</span>
+                        </div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <a id="more-news">查看更多</a>
+                  <br>
+                  <a id="redirect-news">进入新页面查看</a>
+                  <br>
+                  <a id="retract-news">收起</a>
+                </div>
+              </div>
+
+              
+              <hr>
+              
+              <h4>申请加入</h4>
+              
+              <h5><a href="#"><i class="glyphicon glyphicon-user"></i> John Chapman</a></h5>
+              <h5><a href="#"><i class="glyphicon glyphicon-user"></i> Max Axleton</a></h5>
+              <h5><a href="#"><i class="glyphicon glyphicon-user"></i> Devin Skelly</a></h5>
+              <h5><a href="#"><i class="glyphicon glyphicon-user"></i> Katie Kowalski</a></h5>
+              <h5><a href="#"><i class="glyphicon glyphicon-user"></i> Amet Deberge</a></h5>
+            
+              <hr>  
+              
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="http://placehold.it/80/F0F0F0">
+                </a>
+                <div class="media-body">
+                  <h5 class="media-heading">
+                    <a href="#"><strong>软件测试</strong></a>
+                  </h5>
+                  <small>课程有新消息需处理</small><br>
+                  <span class="badge">87</span>
+                </div>
+              </div>
+              
+           </div> 
+           </div><!--/panel-->
+        </div><!--/end mid column-->
+                
+                <!-- right content column-->
+        <div class="col-md-7" id="content">
+          <div class="panel">
+            <div class="panel-heading" style="background-color:#111;color:#fff;">消息盒子</div>   
+            <div class="panel-body">
+              <div class="post-inform">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="name">发送通知</label>
+                    <textarea id="mess2send" class="form-control" rows="6"></textarea>
+                  </div>
+                  <div class="text-right">
+                    <ul class="dropdown">
+                      <span role="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                        <div id="check-recipient">发送对象</div>
+                      </span>
+                      <ul class="dropdown-menu pull-right">
+                        <li><a id="all-members">与课学生</a></li>
+                        <li><a data-toggle="modal" data-target="#memberChoice">部分学生</a></li>
+                      </ul>
+                      <span role="button" class="btn btn-primary" data-toggle="popover" data-placement="top" 
+                      data-content="请确认发送对象" id="send-message"
+                      >发送</span>
+                    </ul >
+                  </div>
+                </form>
+              </div>
+              <hr>
+
+
+              <div class="row" id="class-data">
+                <div class="col-md-8">
+                  <h2 class="course-name">系统分析设计</h2>
+                  <p id="course-intro">
+                    课程介绍:
+                  </p>
+                  <br><br>
+                  <button class="btn btn-info" id="course-info-edit" data-toggle="modal" data-target="#newCourse">课程细节</button>
+                </div> 
+                <div class="col col-sm-4">
+                  <div class="text-muted list-group-item active"><small>时间</small></div>
+                    <p class="list-group-item" id="course-time">
+                    </p>
+                  <hr>
+                  <div class="text-muted list-group-item active"><small>课室</small></div>
+                  <p class="list-group-item" id="classroom">
+                  </p>
+                </div>   
+              </div>
+            
+              <hr>
+              
+              <div class="row" id="invide-code">
+                <img id="QR-Code" class="img-responsive col col-sm-8" src="http://qr.liantu.com/api.php?text=10000">
+                <div class="col col-sm-4">
+                  <h1 class="text-muted">邀请成员</h1>
+                  <div class="share-link">
+                    <div class="bdsharebuttonbox"><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone">QQ空间</a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina">新浪微博</a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq">腾讯微博</a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren">人人网</a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin">微信</a><a href="#" class="bds_more" data-cmd="more">分享到：</a></div>
+                  </div>
+                  <!--later version-->
+                </div>
+              </div>
+              <hr>
+              
+              <div id="member-manager">
+                <table class="table table-condensed">
+                  <caption><h3>成员管理</h3></caption>
+                    <thead>
+                      <tr>
+                        <th>头像</th>
+                        <th>姓名</th>
+                        <th>ID</th>
+                      </tr>
+                     </thead>
+                     <tbody id="member-list">
+                        <tr data-toggle="modal" data-target="#memberInfo" class='member'>
+                           <td><img src="head.jpg" class="member-head"></td>
+                           <td>Bangalore</td>
+                           <td>560001</td>
+                        </tr>
+                     </tbody>
+                </table>
+                <div class="pull-right">
+                  <ul class="pagination">
+                      <li><a>&laquo;</a></li>
+                      <li class="active"><a>1</a></li>
+                      <li><a>2</a></li>
+                      <li><a>3</a></li>
+                      <li><a>4</a></li>
+                      <li><a>5</a></li>
+                      <li><a>&raquo;</a></li>
+                  </ul>
+                </div>
+                <br>
+              </div>
+           
+            </div><!--/panel-body-->
+          </div><!--/panel-->
+           <!--/end right column-->
+        </div> 
+      </div>
+    </div>
+
+
+    <footer>
+      <div class="container">
+       <div class="row">
+          <div class="col-md-12 text-right"><h5>©six-gods</h5></div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="memberInfo" tabindex="-1" role="dialog" 
+       aria-labelledby="memberInfoLabel" aria-hidden="true">
+       <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal" aria-hidden="true">
+                      &times;
+                </button>
+                <h4 class="modal-title" id="memberInfoLabel">
+                   学生信息
+                </h4>
+             </div>
+             <div class="modal-body row">
+                <div class="col col-md-3">学号：<div id="info-SID">12330285</div></div>
+                <div class="col col-md-3">卡号：<div id="info-CID">370682</div></div>
+                <div class="col col-md-3">邮箱：<div id="info-EMAIL">kassian@123.com</div></div>
+                <div class="col col-md-3">手机：<div id="info-PHONE">118012</div></div>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                   data-dismiss="modal">关闭
+                </button>
+                <button type="button" id="promo-member" class="btn btn-primary">
+                   提升为管理员
+                </button>
+                <button type="button" id="kick-member" class="btn btn-primary">
+                   踢出课程
+                </button>
+             </div>
+          </div><!-- /.modal-content -->
+      </div><!-- /.modal -->
+    </div>
+
+    <div class="modal fade" id="memberChoice" tabindex="-1" role="dialog" 
+       aria-labelledby="memberChoiceLabel" aria-hidden="true">
+       <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal" aria-hidden="true">
+                      &times;
+                </button>
+                <a class="modal-title" id="memberChoiceLabel">
+                   选择发送对象
+                </a>
+             </div>
+             <div class="modal-body">
+                <form role="form" id="member-check" class="form-horizontal row">
+                </form>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                   data-dismiss="modal">关闭
+                </button>
+                <button type="button" id="chosse-all"class="btn btn-primary">
+                   全选
+                </button>
+                <button type="button" id="chosse-done"class="btn btn-primary" data-dismiss="modal">
+                   确定
+                </button>
+             </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal -->  
+    </div>  
+
+
+    <div class="modal fade" id="newCourse" tabindex="-1" role="dialog" 
+       aria-labelledby="newCourseLabel" aria-hidden="true">
+       <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal" aria-hidden="true">
+                      &times;
+                </button>
+                <div class="modal-title" id="newCourseLabel">
+                   创建新课程
+                </div>
+             </div>
+              <div class="modal-body container">
+                <div class="row">
+                  <form class="bs-example bs-example-form col-md-3" role="form">
+                    <div class="input-group">
+                       <span class="input-group-addon">课程序列</span>
+                       <input type="text" id="NC-ID" class="form-control">
+                    </div>
+                    <br>
+
+                    <div class="input-group">
+                       <span class="input-group-addon">课程编号</span>
+                       <input type="text" id="NC-Code" class=" form-control">
+                    </div>
+                    <br>
+
+                    <div class="input-group">
+                       <span class="input-group-addon">课程名称</span>
+                       <input type="text" id="NC-Name" class=" form-control">
+                    </div>
+                    <br>
+
+                    <div class="input-group">
+                       <span class="input-group-addon">课程学期</span>
+                       <input type="text" id="NC-Term" class=" form-control">
+                    </div>
+                    <br>
+
+                    <div class="input-group">
+                       <span class="input-group-addon">开始时间</span>
+                       <input type="text" id="NC-STime" class="form-control">
+                    </div>
+                    <br>
+
+                    <div class="input-group">
+                       <span class="input-group-addon">结束时间</span>
+                       <input type="text" id="NC-ETime" class=" form-control">
+                    </div>
+                    <br>              
+                  </form>
+                  <form class="bs-example bs-example-form col-md-3" role="form">
+
+                    <div class="input-group">
+                       <span class="input-group-addon">授课老师</span>
+                       <div class="input-group" id="TEs-form">
+                         <input type="text" class="NC-Teacher form-control">
+                       </div>
+                       <span class="input-group-addon" id="newTE">
+                              ++
+                       </span>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                      <span class="input-group-addon">教学助理</span>
+                      <div class="input-group" id="TAs-form">
+                        <input type="text" class="NC-TAS form-control">
+                      </div>
+                      <span class="input-group-addon" id="newTA">
+                             ++
+                      </span>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                       <span class="input-group-addon">上课时间</span>
+                       <select class="form-control" id="NC-WDay">
+                           <option value="1">周一</option>
+                           <option value="2">周二</option>
+                           <option value="3">周三</option>
+                           <option value="4">周四</option>
+                           <option value="5">周五</option>
+                           <option value="6">周六</option>
+                           <option value="7">周日</option>
+                       </select>
+                       <div class="input-group">
+                         <input type="text" id="NC-SCour" class=" form-control">
+                         <span class="input-group-addon">节开始</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="NC-ECour" class=" form-control">
+                         <span class="input-group-addon">节结束</span>
+                       </div>
+                    </div> 
+                    <br>
+                    <div class="input-group">
+                       <span class="input-group-addon">上课地点</span>
+                       <div class="input-group">
+                         <input type="text" id="NC-Loca" class=" form-control">
+                         <span class="input-group-addon">校区</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="NC-Room" class=" form-control">
+                         <span class="input-group-addon">教室</span>
+                       </div>
+                       <select class="form-control" id="NC-Build">
+                           <option value="1">公教</option>
+                           <option value="2">实验楼</option>
+                       </select>
+                    </div> 
+
+                  </form>
+                </div>
+                <br>
+                <div class="row">    
+                  <form class="bs-example bs-example-form col-md-6" role="form">
+                    <div class="input-group">
+                       <span class="input-group-addon">课程安排</span>
+                       <div class="input-group">
+                          <div class="row" id="chapter-form">
+                           <div class="col-md-12">
+                              <div class="input-group">
+                              <span class="input-group-addon">章节:</span>
+                              <input type="text" class="NC-C-No form-control">
+                              </div>
+                              <div class="input-group">
+                              <span class="input-group-addon">名称:</span>
+                              <input type="text" class="NC-C-Name form-control">
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <span class="input-group-addon">简介:</span>
+                              <textarea class="form-control NC-C-Bref" rows="1"></textarea>
+                           </div>
+                           <div class="col-md-12">
+                              <span class="input-group-addon">内容:</span>
+                              <textarea class="form-control NC-C-Cont" rows="1"></textarea>
+                           </div>
+                          </div>
+                       </div>
+                       <span class="input-group-addon" id="newChapter">
+                          ++
+                       </span>
+                    </div>
+                  </form>
+                </div>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                   data-dismiss="modal">关闭
+                </button>
+                <button type="button" id="newCourse-done"class="btn btn-primary" data-dismiss="modal">
+                   确定
+                </button>
+             </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal -->  
+    </div>
+
+    <div class="modal fade" id="memProfile" tabindex="-1" role="dialog" 
+       aria-labelledby="memProfileLabel" aria-hidden="true">
+       <div class="modal-dialog">
+          <div class="modal-content">
+             <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal" aria-hidden="true">
+                      &times;
+                </button>
+                <div class="modal-title" id="memProfileLabel">
+                   个人信息
+                </div>
+             </div>
+             <div class="modal-body container" >
+                <div class="row">
+                  <form class="col-md-1" role="form">
+                  </form>
+                  <form class="col-md-4" role="form">
+                    <div class="input-group col-md-12">
+                       <span class="input-group-addon">用户序号</span>
+                       <input type="text" id="TA-ID" class="form-control" disabled>
+                    </div>
+                    <br>
+
+                    <div class="input-group col-md-12">
+                       <span class="input-group-addon">昵称</span>
+                       <input type="text" id="TA-NickName" class=" form-control">
+                    </div>
+                    <br>
+
+                    <div class="input-group col-md-12">
+                       <span class="input-group-addon">姓名</span>
+                       <input type="text" id="TA-Name" class=" form-control">
+                    </div>
+                    <br>   
+                    <div class="input-group">
+                       <span class="input-group-addon">管理课程</span>
+                       <div class="input-group col-md-12" id="TA-Manage-form">
+                         <input type="text" class="TA-Manage form-control">
+                       </div>
+                    </div>
+                    <br>
+
+
+                    <div class="input-group col-md-12">
+                       <span class="input-group-addon">身份信息</span>
+                       <div class="input-group">
+                         <input type="text" id="TA-WorkID" class=" form-control" disabled>
+                         <span class="input-group-addon">学号</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-CardID" class=" form-control">
+                         <span class="input-group-addon">卡号</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-Email" class=" form-control">
+                         <span class="input-group-addon">邮件</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-Phone" class=" form-control">
+                         <span class="input-group-addon">电话</span>
+                       </div>
+                    </div>
+                    <br>
+
+                    <div class="input-group col-md-12">
+                       <span class="input-group-addon">教育经历</span>
+                       <div class="input-group">
+                         <input type="text" id="TA-Univer" class=" form-control">
+                         <span class="input-group-addon">大学</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-School" class=" form-control">
+                         <span class="input-group-addon">院系</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-Major" class=" form-control">
+                         <span class="input-group-addon">专业</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-Level" class=" form-control">
+                         <span class="input-group-addon">年级</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-SYear" class=" form-control">
+                         <span class="input-group-addon">开始于</span>
+                       </div>
+                       <div class="input-group">
+                         <input type="text" id="TA-EYear" class=" form-control">
+                         <span class="input-group-addon">毕业于</span>
+                       </div>
+                    </div>
+                    <br>      
+                  </form>
+                  <form class="col-md-1" role="form">
+                  </form>
+                </div>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-default" 
+                   data-dismiss="modal">关闭
+                </button>
+                <button type="button" id="editPro-done"class="btn btn-primary" data-dismiss="modal">
+                   确定
+                </button>
+             </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal -->  
+    </div>
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor  -->
+        
+        <script type='text/javascript'>
+        $(document).ready(function() {
+          $('#sidebar').affix({
+            offset: {
+              top: 230,
+              bottom: 100
+            }
+          });   
+          $('#midCol').affix({
+            offset: {
+              top: 230,
+              bottom: 90
+            }
+          });
+          $("[data-toggle='popover']").popover({
+            trigger: 'hover'
+          });
+          $("#newTA").click(function(){
+            $("#TAs-form").append(
+              "<input type='text' class='NC-TAS form-control'>"
+            );
+          });
+          $("#newTE").click(function(){
+            $("#TEs-form").append(
+              "<input type='text' class='NC-Teacher form-control'>"
+            );
+          });
+          $("#newChapter").click(function(){
+            $("#chapter-form").append(
+              " <div class='col-md-12'>"+
+              "    <div class='input-group'>"+
+              "    <span class='input-group-addon'>章节:</span>"+
+              "    <input type='text' class='NC-C-No form-control'>"+
+              "    </div>"+
+              "    <div class='input-group'>"+
+              "    <span class='input-group-addon'>名称:</span>"+
+              "    <input type='text' class='NC-C-Name form-control'>"+
+              "    </div>"+
+              " </div>"+
+              " <div class='col-md-12'>"+
+              "    <span class='input-group-addon'>简介:</span>"+
+              "    <textarea class='form-control NC-C-Bref' rows='1'></textarea>"+
+              " </div>"+
+              " <div class='col-md-12'>"+
+              "    <span class='input-group-addon'>内容:</span>"+
+              "    <textarea class='form-control NC-C-Cont' rows='1'></textarea>"+
+              " </div>"
+            );
+          });
+        });
+        </script>
+        <script>
+
+        </script>
+        
+    </body>
+</html>
