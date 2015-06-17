@@ -61,7 +61,7 @@ jQuery(document).ready(function() {
 						$.cookie("Password", password, { expires: 7 });
 	    				$(window.location).attr('href', 'test.html');
 					}
-				},
+				},   
 				error: function() {
 					$("#tip").text("用户名或者密码错误");
 					$("#tip").css("display","block");
