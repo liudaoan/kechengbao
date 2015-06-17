@@ -9,6 +9,7 @@ var UID;
 var PWD;
 var CID;
 var CTN;
+var dataindex;
 window.onload=function()//用window的onload事件，窗体加载完毕的时候
 {
 	var Request = new Object();
@@ -38,9 +39,17 @@ window.onload=function()//用window的onload事件，窗体加载完毕的时候
 		},
 	}).done(function(Data) {
 		console.log(Data);
+		
+		
 		data = JSON.parse(Data);
+		for(var i = 0; i < data.length; i++){
+			if(data[0].QuestionNo == QNO){
+				alert("find it : " + QNO);
+			}
+		}
+		
 		answer =data[QNO].Anwser;
-		if(answer.length % 15 > 0)
+		if(answer.length % 15 > 0)    
 		{
 			maxPage =  Math.ceil(answer.length/15);
 		}
@@ -49,7 +58,7 @@ window.onload=function()//用window的onload事件，窗体加载完毕的时候
 		if(Request["flag"]==1){
 			currPage = maxPage-1;
 		}
-		$("#question").text(data[data.length - QNO + 1].Ask.Text);
+		$("#question").text(data[QNO].Ask.Text);
 		$("#asker_date").text("(By " +　data[0].Ask.UserID + "  "+  data[0].Ask.Date.substr(0,19)　+ ")");
 		$("#maxPage").text("共" + maxPage + "页");
 		for(var i = 0; i < 15; i++){

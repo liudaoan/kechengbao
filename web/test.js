@@ -7,7 +7,7 @@ var TA_manageListDetail;
 $(document).ready(function(){
 	var userID = $.cookie("UserID");
 	var password = $.cookie("Password");
-	if (userID == null || password == null) {
+	if (userID == null || password == null) {   
     	//$(window.location).attr('href', 'login.html');
     	userID = "12330285";
     	password = "12330";
