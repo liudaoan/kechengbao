@@ -57,6 +57,7 @@ jQuery(document).ready(function() {
 				statusCode: {
 				    200: function() {
 						$.cookie("UserID", username, { expires: 7 });
+						alert("cookie is " + $.cookie("UserID"));
 						$.cookie("Password", password, { expires: 7 });
 	    				$(window.location).attr('href', 'test.html');
 					}
@@ -71,7 +72,7 @@ jQuery(document).ready(function() {
     	else{
     		if(repassword == password){
     			$.ajax({
-					url : '172.18.35.52:8080/api',
+					url : '/api',
 					type : 'POST',
 					data : {
 						'Action' : "REGISTER",
@@ -83,12 +84,15 @@ jQuery(document).ready(function() {
 							$("#password").val("");
 							$("#repassword").val("");
 							$("#tip").text("注册成功：请登录");
+							$("#tip").css("display","none");
+							$(window.location).attr('href', 'login.html');
 						},
 
 						402: function() {
 							$("#password").val("");
 							$("#repassword").val("");
 							$("#tip").text("注册失败：用户已存在");
+							$("#tip").css("display","block");
 						}
 					},
 					error: function() {
